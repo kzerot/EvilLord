@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Вход в царство несуразицы</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Max" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="{{ static_url("style.css") }}" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="{{ static_url("style_login.css") }}" type="text/css" media="screen, projection" />	
+	</head>
+
+	<body>
+		<form id="login" action="/login" method="post">
+		    <h1>Господин, залогинтесь!</h1>
+		    <fieldset id="inputs">
+		        <input id="lordname" name="name" type="text" placeholder="lordname" autofocus required>   
+		        <input id="password" name="password" type="password" placeholder="Password" required>
+		    </fieldset>
+		    <fieldset id="actions">
+		        <input type="submit" id="submit" value="Войти">
+		        <a href="">Забыл пароль? Сам дурак!</a>
+		        <a href="/register">Присоединиться</a>
+		    </fieldset>
+		</form>
+	</body>
+</html>

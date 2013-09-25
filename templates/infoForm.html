@@ -1,0 +1,11 @@
+{% autoescape None %}
+<div class="infoForm" style="display: block">
+	<div class="infoCaption">{{data.caption}}</div>
+	<div class="infoClose" onclick="closeThis(this)">X</div>
+	<div class="infoBody">
+		{% for line in data.lines %}
+			{{line}}
+		{% end %}
+	</div>
+</div>
+ 

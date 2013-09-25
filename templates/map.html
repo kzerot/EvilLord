@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang='en'>
+
+   <head>
+
+      <meta charset='UTF-8' />
+
+      <title>tile engine</title>
+
+      <link rel='stylesheet' href='map.css' media='all' />
+
+   </head>
+
+   <body>
+
+
+      <div id='output'></div>
+
+      <canvas id='canvas' width='320' height='320'></canvas>
+
+
+      <script src='map.js'></script>
+
+<script>
+
+var mapone = [
+                ['r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'r', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'r'],
+                ['r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r']
+             ];
+
+
+window.addEventListener('load', function()
+{
+   engine.start(mapone,1, 0);   //change the last parameters to 'move' the map.
+}, false);
+
+</script>
+
+
+   </body>
+
+</html>

@@ -1,0 +1,119 @@
+body
+{
+    font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;    
+    margin: 0;
+    background-color: #EEE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+    background-image: -webkit-linear-gradient(top, #FFF, #EEE);
+    background-image: -moz-linear-gradient(top, #FFF, #EEE);
+    background-image: -ms-linear-gradient(top, #FFF, #EEE);
+    background-image: -o-linear-gradient(top, #FFF, #EEE);
+    background-image: linear-gradient(top, #FFF, #EEE);  
+    color:#444444;  
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+}
+a {
+	color: #666666;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 1px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	width: 1024px;
+	min-width: 1024px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	width: 100%;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	padding: 0 0 50px;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+#container {
+	width: 100%;
+	float: left;
+}
+#content {
+	padding: 0 220px 0 220px;
+}
+
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 200px;
+	margin-left: -100%;
+	position: relative;
+}
+
+
+/* Sidebar Right
+-----------------------------------------------------------------------------*/
+#sideRight {
+	float: left;
+	margin-right: -3px;
+	width: 200px;
+	margin-left: -200px;
+	position: relative;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	margin: -50px auto 0;
+	min-width: 600px;
+	height: 25px;
+	position: relative;
+}
+
+ul li
+{	
+	list-style: none;
+}

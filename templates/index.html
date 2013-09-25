@@ -1,0 +1,140 @@
+{% autoescape None %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Evillord</title>
+	<meta name="author" content="Max" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		
+	<script type="text/javascript" src={{ static_url("say.js") }}></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"  />
+			
+	<link rel="stylesheet" href="{{ static_url("style.css") }}" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="{{ static_url("style_form.css") }}" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<header id="header">
+		<ul id="menu" class="menu">
+			<li class="leftround">
+				<a href=#>Вики</a>
+			</li>
+			<li>
+				<a href=#>О игре</a>
+			</li>
+			<li>
+				<a href=#>Новости</a>
+			</li>
+			<li>
+				<a href=#>Блог</a>
+			</li>
+			<li class="rightround">
+				<a href="/logout">Выйти</a>
+			</li>
+		</ul>
+	</header><!-- #header-->
+
+	<section id="middle">
+
+		<div id="container">
+			<div id="content">
+				<div class="miniform">
+					<div class="minicaption">
+						РАЗГОВОРЫ
+					</div>
+					<div class="minibody">
+						<form id="sayForm">
+						  <input id='sayInput' type="text" name="say" placeholder="Тута пишите!" autofocus/>
+						  <input id="sayBtn" type="submit" value="Приказать" />
+						  <input type="hidden" id="phraseTo" name="phraseTo" value="town">
+						</form>
+						<div id='allmessages'>
+							<div id="messagestown" class='messageBox'>
+								<div class='firstmessage'></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- #container-->
+
+		<aside id="sideLeft">
+			<ul id="sortableLeft" class="connected">
+				<li class="miniform" id="dialoginfo">
+					<div class="minicaption">
+						ГЕРОИ
+					</div>
+					<div class="heroes minibody">
+						<p id="town" onclick="selectHero('')">Ваш помощник</p>
+						<ul id="heroes">
+						       {% for hero in heroes %}
+						         {{ hero.html }}
+						       {% end %}			
+						</ul>
+					</div>
+				</li>
+				
+				<li class="miniform" id="heroinfo">
+					<div class="minicaption">
+						Герой
+					</div>
+					<div class="minibody">
+
+					</div>
+				</li>				
+			</ul>
+		</aside><!-- #sideLeft -->
+
+		<aside id="sideRight">
+			<ul id="sortableRight" class="connected">
+				<li class="miniform" id="towninfo">
+					<div class="minicaption">
+						Постройки {{ townName }}
+					</div>
+					<div class="minibody">
+						<ul id="buildings">
+				       {% for building in buildings %}
+				         {{ building.html }}
+				       {% end %}
+				       </ul>
+					</div>
+				</li>
+				
+				<li class="miniform" id="youinfo">
+					<div class="minicaption">
+						РАЗНОЕ
+					</div>
+					<div class="minibody">
+						<ul>
+							<li>
+								Вас зовут {{ lord.name }}
+							</li>
+							<li>
+								Ваше влияние {{ lord.power }}
+							</li>
+							<li>
+								Количество героев {{lord.herocount}}
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</aside><!-- #sideRight -->
+
+	</section><!-- #middle-->
+
+</div><!-- #wrapper -->
+
+<footer id="footer">
+</footer><!-- #footer -->
+
+</body>
+</html>
